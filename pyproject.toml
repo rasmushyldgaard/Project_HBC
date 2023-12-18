@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools>=42.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = "--cov=./src --cov-fail-under=100 --cov-report term-missing"
+testpaths = [
+    "tests",
+]
+
+[tool.coverage]
+    [tool.coverage.run]
+    omit = [
+        '__init__.py',
+        'tests/*',
+        '.venv/*',
+        'src/controller/collector.py',
+        'src/controller/planner.py',
+        'src/data/helperfunctions/week_days.py',
+        'src/data/helperfunctions/minicon/*',
+        'src/database/*',
+        'src/ui/*',
+        'src/main.py',
+        'src/controller/enums/*',
+        'src/data/battery/*',
+
+    ]
+
+    [tool.coverage.report]
+    skip_empty = true
+
+[tool.pylint.MASTER]
+ignore='tests'
+
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 120
+disable = """
+    raw-checker-failed,
+    bad-inline-option,
+    locally-disabled,
+    file-ignored,
+    suppressed-message,
+    useless-suppression,
+    deprecated-pragma,
+    use-symbolic-message-instead,
+    invalid-name,
+    trailing-whitespace,
+    trailing-newlines,
+    missing-final-newline,
+    logging-fstring-interpolation,
+    wrong-import-order,
+    fixme,
+    anomalous-backslash-in-string,
+    duplicate-key,
+    duplicate-code,
+    unnecessary-lambda-assignment,
+    too-many-ancestors,
+    too-many-instance-attributes,
+    too-many-statements,
+    superfluous-parens
+        
+"""
+
+[tool.mypy]
+mypy_path = "src"
+exclude = [
+    '/planner\.py$'
+]
+check_untyped_defs = true
+disallow_any_generics = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = false
+follow_imports = "skip"

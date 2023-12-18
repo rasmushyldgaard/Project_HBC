@@ -1,0 +1,13 @@
+venv/
+.vscode/
+__pycache__/
+.pytest_cache/
+hbc.egg-info/
+.mypy_cache/
+htmlcov/
+.coverage
+.tox/
+*.json
+!dummy.json
+!settings_default.json
+*.db

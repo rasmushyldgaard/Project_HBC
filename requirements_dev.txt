@@ -1,0 +1,7 @@
+pylint==2.17.5
+pytest==7.4.1
+pytest-cov==4.1.0
+mypy==1.5.1
+tox==4.11.1
+dash==2.13.0
+dash-bootstrap-components==1.4.2
