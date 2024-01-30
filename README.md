@@ -1,7 +1,8 @@
-# Project HomeBatteryController (Bachelor)
+# Project HomeBatteryController
 ![Tests](https://github.com/rasmushyldgaard/Project_HBC/actions/workflows/tests.yml/badge.svg)
 
-This is the top secret repository for HomeBatteryController source code.
+This bachelor project was done by AU Engineering students:
+Rasmus Hyldgaard & Jørgen Moesgaard Jørgensen
 
 ### Setup development environment
 ---
